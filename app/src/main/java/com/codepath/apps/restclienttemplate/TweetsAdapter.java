@@ -15,6 +15,8 @@ import com.codepath.apps.restclienttemplate.models.Tweet;
 
 import java.util.List;
 
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
+
 public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder> {
 
     Context context;
@@ -80,7 +82,12 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             tvBody.setText(tweet.body);
             tvScreenName.setText(tweet.user.screenName);
             tvTimestamp.setText(tweet.getFormattedTimestamp(tweet.createdAt));
-            Glide.with(context).load(tweet.user.profileImageURL).into(ivProfileImage);
+            int radius = 20; // corner radius, higher value = more rounded
+            int margin = 5; // crop margin, set to 0 for corners with no crop
+            Glide.with(context)
+                    .load(tweet.user.profileImageURL)
+                    .transform(new RoundedCornersTransformation(radius, margin))
+                    .into(ivProfileImage);
         }
     }
 
