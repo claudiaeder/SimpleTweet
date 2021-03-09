@@ -40,9 +40,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 - [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
 - [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
 
-# Project 2 - *SimpleTweet"
-
-**Name of your app** is an android app that allows a user to view his Twitter timeline and post a new tweet. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
+# Part 2
 
 Time spent: **8* hours spent in total
 
